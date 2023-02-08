@@ -13,39 +13,29 @@ class SnackItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      width: MediaQuery.of(context).size.width,
-      padding: const EdgeInsets.all(5),
-      child: Column(
-        children: [
-        Image.network(snackImage), 
-        const SizedBox(width: 1),
-        Row(
+    return Center(
+      child: Container(
+        height: 230,
+        width: MediaQuery.of(context).size.width,
+        padding: const EdgeInsets.all(5),
+        child: Column(
           children: [
-            Expanded(child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text(snackName), const SizedBox(width: 3)],
+          Image( image: NetworkImage(snackImage), height: 170),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                Expanded(child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [Text(snackName, style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)), const SizedBox(width: 3)],
 
-            )),
-            Expanded(child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text(snackName), const SizedBox(width: 3)],
-
-            ))
-          ],
-        )
-        // Expanded(
-        //   child: Row(
-        //     crossAxisAlignment: CrossAxisAlignment.start,
-        //     mainAxisAlignment: MainAxisAlignment.center,
-        //     children: [Text(snackName), const SizedBox(width: 8)],
-
-        // ))
-
-      ],),
+                )),
+              ],
+            ),
+          )
+        ],),
+      ),
     );
   }
 }

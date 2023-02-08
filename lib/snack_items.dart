@@ -25,8 +25,8 @@ class SnackItems extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             boxShadow: [BoxShadow(
               color: Color.fromARGB(127, 0, 0, 0),
-              blurRadius: 15,
-              spreadRadius: 2
+              blurRadius: 6,
+              spreadRadius: 1
             )]
           ),
           height: 210,
